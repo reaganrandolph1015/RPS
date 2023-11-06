@@ -34,20 +34,22 @@ let playerChoice = "rock"
 
 function game() {
     let playerScore = 0
-    let computerScore = 0
+    let computerScore = 0 
     let playerChoice = prompt("Rock, paper, scissors?")
     console.log(playerScore, computerScore)
     console.log(computerChoice)
     playRound(computerChoice, playerChoice)
+    let result = playRound(computerChoice,playerChoice)
     
-    
-    if (playRound() === "You win!") {
+    if (result === "You win!") {
         playerScore++
-    } else if (playRound() === "You lose!") {
+    } else if (result === "You lose!") {
         computerScore++
     }
     console.log(playRound(computerChoice, playerChoice))
-    return(playerScore, computerScore)
+    let currentScore = `Player: ${playerScore} | Computer: ${computerScore}`
+    
+    return currentScore
 } 
 
 console.log(game())
