@@ -5,18 +5,21 @@ function getComputerChoice(){
     return npcChoices
 }
 
-console.log(getComputerChoice())
+//console.log(getComputerChoice())
 
-function playRound(){
-    let computerChoice = getComputerChoice()
-    let playerChoice = prompt('Rock, paper, scissors?')
-
+function playRound(computerChoice, playerChoice){
     if (computerChoice == playerChoice) {
         return "Draw!"
-    } else if (computerChoice == 'rock' && playerChoice == 'scissors'){
-        return "You lose!"
     } else if (computerChoice == 'scissors' && playerChoice == 'rock'){
         return "You win!"
-    }
+    } else if (computerChoice == 'paper' && playerChoice == 'rock'){
+        return "You lose!"
+    } 
 }
-console.log(playRound())
+
+const computerChoice = getComputerChoice()
+const playerChoice = "rock"
+
+console.log(computerChoice) //show NPC choice
+
+console.log(playRound(computerChoice,playerChoice))
