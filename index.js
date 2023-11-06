@@ -17,8 +17,8 @@ function playRound(computerChoice, playerChoice){
     } 
 }
 
-const computerChoice = getComputerChoice()
-const playerChoice = "rock"
+let computerChoice = getComputerChoice()
+let playerChoice = "rock"
 
 console.log(computerChoice) //show NPC choice
 
